@@ -1,0 +1,107 @@
+
+body{
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.header{
+    background-color: white;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 100%;
+    z-index: -1;
+}
+.header ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+.nav-item {
+    color:grey;
+}
+.header ul a{
+    display: block;
+    padding:20px;
+    text-decoration: none;
+}
+.header ul a:hover{
+    background-color: rgb(233, 227, 227);
+}
+.header .logo{
+    width: 100px;
+    float:left;
+}
+.header .menu{
+    clear: both;
+    max-height: 0;
+    transition: max-height .8s ease-out;
+}
+.header .menu-icon{
+    padding:28px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+.header .menu-icon .nav-icon{
+    background-color: black;
+    display: block;
+    width: 18px;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    margin-top:6px;
+}
+.header .menu-icon .nav-icon::before,
+.header .menu-icon .nav-icon::after{
+    background-color: black;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: all .2s ease-out;
+    position: absolute;
+
+}
+
+.header .menu-icon .nav-icon::before{
+    top: 5px;
+}
+.header .menu-icon .nav-icon::after{
+    top: -5px;
+}
+.header .menu-btn{
+    display:none;
+}
+.header .menu-btn:checked~.menu{
+    max-height:240px;
+}
+.header .menu-btn:checked~.menu-icon .nav-icon{
+    background-color: transparent;
+}
+.header .menu-btn:checked~.menu-icon .nav-icon::before{
+    transform: rotate(-45deg);
+    top:0;
+}
+.header .menu-btn:checked~.menu-icon .nav-icon::after{
+    transform: rotate(45deg);
+    top:0;
+}
+@media (min-width: 48em){
+    .header li{
+        float:left;
+    }
+    .header li a {
+        padding: 26px 30px;
+    }
+    .header .menu{
+        clear:none;
+        float: left;
+        max-height: none;
+    }
+    .header .menu-icon{
+        display:none;
+    }
+
+
+}
