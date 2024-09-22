@@ -1,0 +1,43 @@
+.img-fluid{
+    border: 4px solid rgb(182, 173, 173);
+}
+.container{
+    margin-top: 20px;
+    box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.1);
+    border: 4px solid white;
+}
+.row{
+    margin: 10px;
+}
+.nome{
+  font-family: "Bebas Neue", system-ui;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+  margin-top: 10px;
+}
+.text {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    display: flex;
+    font-size: 19px;
+    align-items: center;
+  }
+.icone{
+    display: flex;
+    justify-content: space-around;
+
+}
+@media(min-width: 1300px){
+    .text{
+        font-size:25px;
+    }
+}
+@media(max-width:48em){
+    .img-fluid{
+        width:200px;
+        height: 200px;
+    }
+}
+

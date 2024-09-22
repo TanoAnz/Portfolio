@@ -1,0 +1,27 @@
+<div class="project-card">
+    <div class="image-slider">
+        <img *ngFor="let image of progetto.images; let i = index" 
+             [src]="image" 
+             [class.active]="i === currentIndex" 
+             alt="Project Image {{i + 1}}"
+             class="rounded">
+    </div>
+
+    <div class="row text-center">
+        <div class="image-switch col-auto" *ngFor="let image of progetto.images; let i = index">
+            <img (click)="onClick(i)" width="10" height="10" class="circle" src="https://img.icons8.com/ios-glyphs/30/circled.png" alt="circled"/>
+        </div>
+    </div>
+
+    <div class="project-info">
+        <h3 class="titolo">{{ progetto.titolo }}</h3>
+        <p class="text">{{ progetto.descrizione }}</p>
+    </div>
+
+    <div class="button">
+        <a [href]="progetto.link" target="_blank" class="project-link col-md-12">View Project</a>
+        <a [href]="progetto.link2" target="_blank" class="project-link col-md-12">View Repository</a>
+    </div>
+</div>
+
+

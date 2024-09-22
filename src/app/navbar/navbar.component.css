@@ -6,7 +6,7 @@ body{
 .header{
     background-color: white;
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-    display: inline-block;
+    display: flex;
     width: 100%;
     z-index: -1;
 }
@@ -104,4 +104,8 @@ body{
     }
 
 
+}
+.menu{
+    display: flex;
+    justify-content: flex-end;
 }

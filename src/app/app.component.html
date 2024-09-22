@@ -1,2 +1,13 @@
 <app-navbar></app-navbar>
-<router-outlet></router-outlet>
+<app-home></app-home>
+<app-education></app-education>
+<section id="Project" class="container text-center">
+    <h3 class="titolo text-center col-md-12">PROJECT</h3>
+    <div class="progetti">
+        <div class="row">
+            <app-project class="col-md-6" *ngFor="let project of progetti" [progetto]="project"></app-project>
+        </div>
+    </div>
+</section>
+<app-footer id="footer"></app-footer>
+
